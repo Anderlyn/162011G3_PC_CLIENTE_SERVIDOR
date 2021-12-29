@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ConversionADolares/ws_conversiones?wsdl" uri="xml-resources/web-service-references/ws_conversiones_1/wsdl/localhost_8080/ConversionADolares/ws_conversiones.wsdl"/>
+    <system systemId="http://localhost:8080/ConversionADolares/ws_conversiones?xsd=1" uri="xml-resources/web-service-references/ws_conversiones_1/wsdl/localhost_8080/ConversionADolares/ws_conversiones.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioWeb/Conversion?wsdl" uri="xml-resources/web-service-references/Conversion/wsdl/localhost_8080/ServicioWeb/Conversion.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioWeb/Conversion?xsd=1" uri="xml-resources/web-service-references/Conversion/wsdl/localhost_8080/ServicioWeb/Conversion.xsd_1.xsd"/>
+</catalog>

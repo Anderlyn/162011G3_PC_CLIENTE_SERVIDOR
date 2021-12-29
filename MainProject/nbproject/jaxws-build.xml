@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-ws_conversiones" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ws_conversiones"/>
+        <property name="wsdl-ws_conversiones" location="xml-resources/web-service-references/ws_conversiones/wsdl/localhost_8080/ConversionADolares/ws_conversiones.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ws_conversiones" destdir="${build.generated.dir}/jax-wsCache/ws_conversiones" wsdl="${wsdl-ws_conversiones}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ConversionADolares/ws_conversiones?wsdl" xnocompile="true" xendorsed="true" package="com.WSClient">
+            <depends file="${wsdl-ws_conversiones}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ws_conversiones"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ws_conversiones">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ws_conversiones" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ws_conversiones"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/WSClient"/>
+    </target>
+    <target name="wsimport-client-Conversion" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Conversion"/>
+        <property name="wsdl-Conversion" location="xml-resources/web-service-references/Conversion/wsdl/localhost_8080/ServicioWeb/Conversion.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Conversion" destdir="${build.generated.dir}/jax-wsCache/Conversion" wsdl="${wsdl-Conversion}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ServicioWeb/Conversion?wsdl" xnocompile="true" xendorsed="true" package="ws.webserv">
+            <depends file="${wsdl-Conversion}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Conversion"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Conversion">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Conversion" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Conversion"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/webserv"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ws_conversiones, wsimport-client-Conversion"/>
+</project>
